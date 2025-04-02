@@ -98,7 +98,7 @@ const LaptopProduct = ({
     return null;
   }
 
-  function updateImage(Images) {
+  function updateImageOrder(Images) {
     setImages(Images);
   }
 
