@@ -121,12 +121,6 @@ export default function JinsProducts() {
                       />
                     </td>
 
-                    {/* <img
-                      class="h-full w-full rounded-full object-cover object-center"
-                      src={session.user.image}
-                      alt=""
-                    /> */}
-
                     <td class=" gap-4 px-2 py-2 font-medium">
                       <Link
                         href={"/jinsProducts/delete/" + product._id}

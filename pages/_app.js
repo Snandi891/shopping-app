@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 
 import { Poppins } from "next/font/google";
 
-import { SessionProvider } from "next-auth/react";
 import Header from "@/components/Header";
 import { Toaster } from "react-hot-toast";
 
@@ -16,11 +15,9 @@ export default function App({
     <main
       className={`mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 ${inter.className}`}
     >
-      <SessionProvider session={session}>
-        <Header />
-        <Component {...pageProps} />
-        <Toaster position="top-center" reverseOrder={false} />
-      </SessionProvider>
+      <Header />
+      <Component {...pageProps} />
+      <Toaster position="top-center" reverseOrder={false} />
     </main>
   );
 }
