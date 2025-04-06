@@ -52,8 +52,12 @@ export default function OrderProducts() {
                     Description
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    traveler
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     Price
                   </th>
+
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     image
                   </th>
@@ -84,7 +88,8 @@ export default function OrderProducts() {
                     <td class="px-6 py-4 truncate max-w-xs ">
                       {product.description}
                     </td>
-                    <td class="px-6 py-4">{formatPrice(product.price)}</td>
+
+                    <td class="px-6 py-4">{product.price}</td>
                     <td class="px-6 py-4 truncate max-w-xs ">
                       <img
                         class=" h-16 w-19 object-contain rounded-full"

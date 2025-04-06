@@ -52,6 +52,9 @@ export default function CartProducts() {
                     Description
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    traveler
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     Price
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
@@ -83,6 +86,9 @@ export default function CartProducts() {
                     </td>
                     <td class="px-6 py-4 truncate max-w-xs ">
                       {product.description}
+                    </td>
+                    <td class="px-6 py-4 truncate max-w-xs ">
+                      {product.traveler}
                     </td>
                     <td class="px-6 py-4">{formatPrice(product.price)}</td>
                     <td class="px-6 py-4 truncate max-w-xs ">

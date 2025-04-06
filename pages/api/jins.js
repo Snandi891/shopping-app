@@ -7,16 +7,44 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price, short, gender, images, size } = req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
+      images,
+    } = req.body;
 
     const JinsDoc = await Jins.create({
       title,
       description,
-      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
       short,
+      phone,
+      price,
+      activity,
+      mode,
       images,
-      gender,
-      size,
     });
     res.json(JinsDoc);
   }
@@ -30,17 +58,45 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const { title, description, price, short, gender, size, images, _id } =
-      req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
+      images,
+      _id,
+    } = req.body;
     await Jins.updateOne(
       { _id },
       {
         title,
         description,
-        size,
-        gender,
         price,
+        traveler,
+        offer,
+        route,
+        sroute,
+        eroute,
+        food,
+        days,
+        place,
+        nearby,
         short,
+        phone,
+        activity,
+        mode,
         images,
       }
     );

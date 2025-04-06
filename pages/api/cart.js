@@ -9,13 +9,13 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price, images } = req.body;
+    const { title, description, price, traveler, images } = req.body;
 
     const CartDoc = await Cart.create({
       title,
       description,
-
       price,
+      traveler,
       images,
     });
     res.json(CartDoc);
@@ -30,14 +30,14 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const { title, description, price, images, _id } = req.body;
+    const { title, description, price, traveler, images, _id } = req.body;
     await Cart.updateOne(
       { _id },
       {
         title,
         description,
-
         price,
+        traveler,
         images,
       }
     );

@@ -7,15 +7,44 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price, brand, color, images } = req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
+      images,
+    } = req.body;
 
     const SunglassDoc = await Sunglass.create({
       title,
       description,
       price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
       images,
-      brand,
-      color,
     });
     res.json(SunglassDoc);
   }
@@ -29,15 +58,45 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const { title, description, price, brand, color, images, _id } = req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
+      images,
+      _id,
+    } = req.body;
     await Sunglass.updateOne(
       { _id },
       {
         title,
         description,
-        brand,
-        color,
         price,
+        traveler,
+        offer,
+        route,
+        sroute,
+        eroute,
+        food,
+        days,
+        place,
+        nearby,
+        short,
+        phone,
+        activity,
+        mode,
         images,
       }
     );

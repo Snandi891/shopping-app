@@ -10,9 +10,19 @@ import toast from "react-hot-toast";
 const ShirtProduct = ({
   _id,
   title: existingTitle,
-  geder: existingGender,
+  traveler: existingTraveler,
+  offer: existingOffer,
+  route: existingRoute,
+  sroute: existingSroute,
+  eroute: existingEroute,
+  food: existingFood,
+  days: existingDays,
+  place: existingPlace,
+  nearby: existingNearby,
   short: existingShort,
-  size: existingSize,
+  phone: existingPhone,
+  mode: existingMode,
+  activity: existingActivity,
   description: existingDescription,
   price: existingPrice,
   images: existingImages,
@@ -21,9 +31,19 @@ const ShirtProduct = ({
   const router = useRouter();
 
   const [title, setTitle] = useState(existingTitle || "");
-  const [size, setSize] = useState(existingSize || "");
-  const [gender, setGender] = useState(existingGender || "");
+  const [traveler, setTraveler] = useState(existingTraveler || "");
+  const [offer, setOffer] = useState(existingOffer || "");
+  const [route, setRoute] = useState(existingRoute || "");
+  const [sroute, setSroute] = useState(existingSroute || "");
+  const [eroute, setEroute] = useState(existingEroute || "");
+  const [food, setFood] = useState(existingFood || "");
+  const [days, setDays] = useState(existingDays || "");
+  const [place, setPlace] = useState(existingPlace || "");
+  const [nearby, setNearby] = useState(existingNearby || "");
   const [short, setShort] = useState(existingShort || "");
+  const [phone, setPhone] = useState(existingPhone || "");
+  const [activity, setActivity] = useState(existingActivity || "");
+  const [mode, setMode] = useState(existingMode || "");
   const [description, setDescription] = useState(existingDescription || "");
   const [price, setPrice] = useState(existingPrice || "");
   const [images, setImages] = useState(existingImages || []);
@@ -43,9 +63,19 @@ const ShirtProduct = ({
       title,
       description,
       price,
-      gender,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
       short,
-      size,
+      phone,
+      activity,
+      mode,
       images,
     };
     if (_id) {
@@ -126,33 +156,15 @@ const ShirtProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              short description
+              Ttaveler
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={short}
-              onChange={(ev) => setShort(ev.target.value)}
-            />
-          </div>
-        </div>
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              gender
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={gender}
-              onChange={(ev) => setGender(ev.target.value)}
+              placeholder="Product Title"
+              value={traveler}
+              onChange={(ev) => setTraveler(ev.target.value)}
             />
           </div>
         </div>
@@ -163,15 +175,225 @@ const ShirtProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              size
+              Offer
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product size"
-              value={size}
-              onChange={(ev) => setSize(ev.target.value)}
+              placeholder="Product Title"
+              value={offer}
+              onChange={(ev) => setOffer(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Route
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={route}
+              onChange={(ev) => setRoute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Starting destination
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={sroute}
+              onChange={(ev) => setSroute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              End destination
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={eroute}
+              onChange={(ev) => setEroute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Food
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={food}
+              onChange={(ev) => setFood(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              days on trip
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={days}
+              onChange={(ev) => setDays(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              place
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={place}
+              onChange={(ev) => setPlace(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              nearby Places
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={nearby}
+              onChange={(ev) => setNearby(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Short Description
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={short}
+              onChange={(ev) => setShort(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Phone Number
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={phone}
+              onChange={(ev) => setPhone(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Activities
+            </label>
+            <input
+              rows={6}
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={activity}
+              onChange={(ev) => setActivity(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Travel Mode
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={mode}
+              onChange={(ev) => setMode(ev.target.value)}
             />
           </div>
         </div>

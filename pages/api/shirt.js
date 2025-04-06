@@ -9,17 +9,44 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price, gender, short, images, size } = req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      images,
+      activity,
+      mode,
+    } = req.body;
 
     const ShirtDoc = await Shirt.create({
       title,
       description,
       price,
-      gender,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
       short,
-      size,
+      activity,
+      mode,
+      phone,
       images,
-      size,
     });
     res.json(ShirtDoc);
   }
@@ -33,17 +60,45 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const { title, description, price, gender, short, size, images, _id } =
-      req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      activity,
+      mode,
+      images,
+      _id,
+    } = req.body;
     await Shirt.updateOne(
       { _id },
       {
         title,
         description,
-        gender,
-        short,
-        size,
         price,
+        traveler,
+        offer,
+        route,
+        sroute,
+        eroute,
+        food,
+        days,
+        place,
+        nearby,
+        short,
+        phone,
+        activity,
+        mode,
         images,
       }
     );

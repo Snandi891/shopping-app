@@ -48,22 +48,14 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/products"> Products </Link>
+                    <Link href="/products"> Sea </Link>
                   </li>
                   <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/shirtProducts"> shirt </Link>
-                  </li>
-
-                  <li
-                    className={
-                      "text-gray-500 transition hover:text-gray-500/75 p-3"
-                    }
-                  >
-                    <Link href="/jinsProducts"> jins </Link>
+                    <Link href="/shirtProducts"> Mountain </Link>
                   </li>
 
                   <li
@@ -71,14 +63,7 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/watchProducts"> watch </Link>
-                  </li>
-                  <li
-                    className={
-                      "text-gray-500 transition hover:text-gray-500/75 p-3"
-                    }
-                  >
-                    <Link href="/laptopProducts"> Laptop </Link>
+                    <Link href="/jinsProducts"> Forest </Link>
                   </li>
 
                   <li
@@ -86,21 +71,22 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/shoesProducts"> shoes </Link>
+                    <Link href="/watchProducts"> Temple </Link>
                   </li>
                   <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/phoneProducts"> phone </Link>
+                    <Link href="/laptopProducts"> Tranding </Link>
                   </li>
+
                   <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/sunglassProducts"> sunglass </Link>
+                    <Link href="/shoesProducts"> Premium </Link>
                   </li>
                 </ul>
               </nav>

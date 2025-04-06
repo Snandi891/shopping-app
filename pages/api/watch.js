@@ -7,17 +7,40 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, price, short, brand, gender, images } =
-      req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      images,
+    } = req.body;
 
     const watchDoc = await Watch.create({
       title,
       description,
       price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
       short,
-      brand,
+      phone,
       images,
-      gender,
     });
     res.json(watchDoc);
   }
@@ -31,17 +54,41 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const { title, description, price, brand, short, gender, images, _id } =
-      req.body;
+    const {
+      title,
+      description,
+      price,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
+      short,
+      phone,
+      images,
+      _id,
+    } = req.body;
     await Watch.updateOne(
       { _id },
       {
         title,
         description,
-        gender,
-        brand,
         price,
+        traveler,
+        offer,
+        route,
+        sroute,
+        eroute,
+        food,
+        days,
+        place,
+        nearby,
         short,
+        phone,
         images,
       }
     );

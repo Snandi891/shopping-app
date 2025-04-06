@@ -10,16 +10,19 @@ import toast from "react-hot-toast";
 const PhoneProduct = ({
   _id,
   title: existingTitle,
-  rom: existingRom,
-  front: existingFront,
-  back: existingBack,
-  display: existingDisplay,
-  color: existingColor,
-  ram: existingRam,
-  cam: existingCam,
+  traveler: existingTraveler,
+  offer: existingOffer,
+  route: existingRoute,
+  sroute: existingSroute,
+  eroute: existingEroute,
+  food: existingFood,
+  days: existingDays,
+  place: existingPlace,
+  nearby: existingNearby,
   short: existingShort,
-  processor: existingProcessor,
-  size: existingSize,
+  phone: existingPhone,
+  mode: existingMode,
+  activity: existingActivity,
   description: existingDescription,
   price: existingPrice,
   images: existingImages,
@@ -28,16 +31,19 @@ const PhoneProduct = ({
   const router = useRouter();
 
   const [title, setTitle] = useState(existingTitle || "");
-  const [size, setSize] = useState(existingSize || "");
-  const [ram, setRam] = useState(existingRam || "");
+  const [traveler, setTraveler] = useState(existingTraveler || "");
+  const [offer, setOffer] = useState(existingOffer || "");
+  const [route, setRoute] = useState(existingRoute || "");
+  const [sroute, setSroute] = useState(existingSroute || "");
+  const [eroute, setEroute] = useState(existingEroute || "");
+  const [food, setFood] = useState(existingFood || "");
+  const [days, setDays] = useState(existingDays || "");
+  const [place, setPlace] = useState(existingPlace || "");
+  const [nearby, setNearby] = useState(existingNearby || "");
   const [short, setShort] = useState(existingShort || "");
-  const [cam, setCam] = useState(existingCam || "");
-  const [rom, setRom] = useState(existingRom || "");
-  const [front, setFront] = useState(existingFront || "");
-  const [back, setBack] = useState(existingBack || "");
-  const [display, setDisplay] = useState(existingDisplay || "");
-  const [color, setColor] = useState(existingColor || "");
-  const [processor, setProcessor] = useState(existingProcessor || "");
+  const [phone, setPhone] = useState(existingPhone || "");
+  const [activity, setActivity] = useState(existingActivity || "");
+  const [mode, setMode] = useState(existingMode || "");
   const [description, setDescription] = useState(existingDescription || "");
   const [price, setPrice] = useState(existingPrice || "");
   const [images, setImages] = useState(existingImages || []);
@@ -57,16 +63,19 @@ const PhoneProduct = ({
       title,
       description,
       price,
-      ram,
-      rom,
-      cam,
+      traveler,
+      offer,
+      route,
+      sroute,
+      eroute,
+      food,
+      days,
+      place,
+      nearby,
       short,
-      front,
-      back,
-      display,
-      color,
-      processor,
-      size,
+      phone,
+      activity,
+      mode,
       images,
     };
     if (_id) {
@@ -147,51 +156,15 @@ const PhoneProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              Ram
+              Ttaveler
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={ram}
-              onChange={(ev) => setRam(ev.target.value)}
-            />
-          </div>
-        </div>
-        {/* <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              sim
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={sim}
-              onChange={(ev) => setSim(ev.target.value)}
-            />
-          </div>
-        </div> */}
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              cam
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={cam}
-              onChange={(ev) => setCam(ev.target.value)}
+              placeholder="Product Title"
+              value={traveler}
+              onChange={(ev) => setTraveler(ev.target.value)}
             />
           </div>
         </div>
@@ -202,13 +175,165 @@ const PhoneProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              short
+              Offer
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
+              placeholder="Product Title"
+              value={offer}
+              onChange={(ev) => setOffer(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Route
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={route}
+              onChange={(ev) => setRoute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Starting destination
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={sroute}
+              onChange={(ev) => setSroute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              End destination
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={eroute}
+              onChange={(ev) => setEroute(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Food
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={food}
+              onChange={(ev) => setFood(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              days on trip
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={days}
+              onChange={(ev) => setDays(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              place
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={place}
+              onChange={(ev) => setPlace(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              nearby Places
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
+              value={nearby}
+              onChange={(ev) => setNearby(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div class="mx-auto my-6 ">
+          <div>
+            <label
+              for="example1"
+              class="mb-1 block text-lg font-medium text-gray-700"
+            >
+              Short Description
+            </label>
+            <input
+              type="text"
+              id="example1"
+              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+              placeholder="Product Title"
               value={short}
               onChange={(ev) => setShort(ev.target.value)}
             />
@@ -221,15 +346,15 @@ const PhoneProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              Rom
+              Phone Number
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Ram"
-              value={rom}
-              onChange={(ev) => setRom(ev.target.value)}
+              placeholder="Product Title"
+              value={phone}
+              onChange={(ev) => setPhone(ev.target.value)}
             />
           </div>
         </div>
@@ -240,15 +365,16 @@ const PhoneProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              Front Camera
+              Activities
             </label>
             <input
+              rows={6}
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product camera"
-              value={front}
-              onChange={(ev) => setFront(ev.target.value)}
+              placeholder="Product Title"
+              value={activity}
+              onChange={(ev) => setActivity(ev.target.value)}
             />
           </div>
         </div>
@@ -259,91 +385,15 @@ const PhoneProduct = ({
               for="example1"
               class="mb-1 block text-lg font-medium text-gray-700"
             >
-              Back Camera
+              Travel Mode
             </label>
             <input
               type="text"
               id="example1"
               class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product back camera"
-              value={back}
-              onChange={(ev) => setBack(ev.target.value)}
-            />
-          </div>
-        </div>
-
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              display
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product display"
-              value={display}
-              onChange={(ev) => setDisplay(ev.target.value)}
-            />
-          </div>
-        </div>
-
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              color
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product color"
-              value={color}
-              onChange={(ev) => setColor(ev.target.value)}
-            />
-          </div>
-        </div>
-
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              processor
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product Processor"
-              value={processor}
-              onChange={(ev) => setProcessor(ev.target.value)}
-            />
-          </div>
-        </div>
-
-        <div class="mx-auto my-6 ">
-          <div>
-            <label
-              for="example1"
-              class="mb-1 block text-lg font-medium text-gray-700"
-            >
-              size
-            </label>
-            <input
-              type="text"
-              id="example1"
-              class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 p-2 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-              placeholder="Product size"
-              value={size}
-              onChange={(ev) => setSize(ev.target.value)}
+              placeholder="Product Title"
+              value={mode}
+              onChange={(ev) => setMode(ev.target.value)}
             />
           </div>
         </div>

@@ -133,8 +133,6 @@ export default function Home() {
             Cart
           </h1>
         </Link>
-        <div className="h-32 rounded-lg bg-gray-200"></div>
-        <div className="h-32 rounded-lg bg-gray-200"></div>
       </div>
     </>
   );
