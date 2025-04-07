@@ -125,14 +125,14 @@ export default function Home() {
             Orders
           </h1>
         </Link>
-        <Link
+        {/* <Link
           className="h-32 rounded-lg justify-center items-center bg-gray-200"
           href={"/cartPage"}
         >
           <h1 className="text-4xl font-bold max-w-1g pt-10 text-center">
             Cart
           </h1>
-        </Link>
+        </Link> */}
       </div>
     </>
   );
