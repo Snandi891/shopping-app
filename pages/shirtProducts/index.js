@@ -28,7 +28,7 @@ export default function ShirtProducts() {
               </h1>
 
               <p className="mt-1.5 text-md text-gray-500">
-                Let create a shirt products
+                Let create sea section
               </p>
             </div>
 
@@ -85,7 +85,10 @@ export default function ShirtProducts() {
                     Price
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    image
+                    Image
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    Traveler
                   </th>
 
                   <th
@@ -118,6 +121,9 @@ export default function ShirtProducts() {
                         src={product.images[0]}
                         alt=""
                       />
+                    </td>
+                    <td class="px-6 py-4 truncate max-w-xs">
+                      {product.traveler}
                     </td>
 
                     <td class=" gap-4 px-2 py-2 font-medium">

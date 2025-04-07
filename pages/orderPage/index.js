@@ -48,18 +48,21 @@ export default function OrderProducts() {
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     Name
                   </th>
-                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    Description
-                  </th>
-                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    traveler
-                  </th>
+
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     Price
                   </th>
-
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                     image
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    Traveler
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    username
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    phoneNo
                   </th>
 
                   <th
@@ -85,9 +88,6 @@ export default function OrderProducts() {
                     <td class="px-6 py-4 truncate max-w-xs ">
                       {product.title}
                     </td>
-                    <td class="px-6 py-4 truncate max-w-xs ">
-                      {product.description}
-                    </td>
 
                     <td class="px-6 py-4">{product.price}</td>
                     <td class="px-6 py-4 truncate max-w-xs ">
@@ -97,6 +97,11 @@ export default function OrderProducts() {
                         alt=""
                       />
                     </td>
+                    <td class="px-6 py-4 truncate max-w-xs">
+                      {product.traveler}
+                    </td>
+                    <td class="px-6 py-4 truncate max-w-xs">{product.name}</td>
+                    <td class="px-6 py-4  max-w-xs">{product.phone}</td>
 
                     <td class=" gap-4 px-2 py-2 font-medium">
                       <Link

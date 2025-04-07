@@ -24,11 +24,11 @@ export default function LaptopProducts() {
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 sm:text-2xl">
-                Jins Products
+                Temple
               </h1>
 
               <p className="mt-1.5 text-md text-gray-500">
-                Let create a Jins products
+                Let create Temple Section
               </p>
             </div>
 
@@ -85,7 +85,10 @@ export default function LaptopProducts() {
                     Price
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    image
+                    Image
+                  </th>
+                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                    Traveler
                   </th>
 
                   <th
@@ -121,6 +124,7 @@ export default function LaptopProducts() {
                         alt=""
                       />
                     </td>
+                    <td class="px-6 py-4">{product.traveler}</td>
 
                     <td class=" gap-4 px-2 py-2 font-medium">
                       <Link
