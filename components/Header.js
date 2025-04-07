@@ -48,22 +48,14 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/products"> Sea </Link>
+                    <Link href="/products"> Tranding </Link>
                   </li>
                   <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/shirtProducts"> Mountain </Link>
-                  </li>
-
-                  <li
-                    className={
-                      "text-gray-500 transition hover:text-gray-500/75 p-3"
-                    }
-                  >
-                    <Link href="/jinsProducts"> Forest </Link>
+                    <Link href="/shirtProducts"> sea </Link>
                   </li>
 
                   <li
@@ -71,14 +63,22 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/watchProducts"> Temple </Link>
+                    <Link href="/jinsProducts"> mountain </Link>
+                  </li>
+
+                  <li
+                    className={
+                      "text-gray-500 transition hover:text-gray-500/75 p-3"
+                    }
+                  >
+                    <Link href="/watchProducts"> forest </Link>
                   </li>
                   <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/laptopProducts"> Tranding </Link>
+                    <Link href="/laptopProducts"> temple </Link>
                   </li>
 
                   <li
