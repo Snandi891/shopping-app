@@ -71,7 +71,7 @@ export default function Header() {
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
-                    <Link href="/watchProducts"> forest </Link>
+                    <Link href="/phoneProducts"> forest </Link>
                   </li>
                   <li
                     className={
