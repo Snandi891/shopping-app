@@ -111,6 +111,14 @@ export default function OrderProducts() {
                         Delete
                       </Link>
                     </td>
+                    <td class=" gap-4 px-2 py-2 font-medium">
+                      <Link
+                        href={"/orderPage/edit/" + product._id}
+                        class="text-green-700"
+                      >
+                        Edit
+                      </Link>
+                    </td>
                   </tr>
                 </tbody>
               ))}

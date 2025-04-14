@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.7.4",
+    "@emailjs/browser": "^4.4.1",
     "axios": "^1.7.9",
     "cloudinary": "^2.5.1",
     "mongodb": "^6.12.0",
