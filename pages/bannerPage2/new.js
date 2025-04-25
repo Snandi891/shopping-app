@@ -5,9 +5,7 @@ export default function NewProduct() {
     <>
       <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between py-3">
         <div>
-          <p className="mt-1.5 text-md text-gray-500">
-            Let create a Banner2 product!
-          </p>
+          <p className="mt-1.5 text-md text-gray-500">Let Add Time!</p>
         </div>
       </div>
 

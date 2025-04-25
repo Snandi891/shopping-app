@@ -72,6 +72,7 @@ const BannerPage = ({
       nearby,
       short,
       activity,
+      phone,
       mode,
       images,
     };

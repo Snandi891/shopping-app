@@ -47,7 +47,7 @@ export default function Home() {
                    hover:text-gray-700 focus:outline-none focus:ring"
                 href={"/bannerPage2"}
               >
-                <span className="text-md font-medium"> Banner 1 </span>
+                <span className="text-md font-medium"> Time </span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -9,44 +9,12 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const {
-      title,
-      description,
-      price,
-      traveler,
-      offer,
-      route,
-      sroute,
-      eroute,
-      food,
-      days,
-      place,
-      nearby,
-      short,
-      phone,
-      activity,
-      mode,
-      images,
-    } = req.body;
+    const { hours, minutes, seconds } = req.body;
 
     const Banner2Doc = await Banner2.create({
-      title,
-      description,
-      price,
-      traveler,
-      offer,
-      route,
-      sroute,
-      eroute,
-      food,
-      days,
-      place,
-      nearby,
-      short,
-      phone,
-      activity,
-      mode,
-      images,
+      hours,
+      minutes,
+      seconds,
     });
     res.json(Banner2Doc);
   }
@@ -60,46 +28,13 @@ export default async function handle(req, res) {
   }
 
   if (method === "PUT") {
-    const {
-      title,
-      description,
-      price,
-      traveler,
-      offer,
-      route,
-      sroute,
-      eroute,
-      food,
-      days,
-      place,
-      nearby,
-      short,
-      phone,
-      activity,
-      mode,
-      images,
-      _id,
-    } = req.body;
+    const { hours, minutes, seconds, _id } = req.body;
     await Banner2.updateOne(
       { _id },
       {
-        title,
-        description,
-        traveler,
-        offer,
-        route,
-        sroute,
-        eroute,
-        food,
-        days,
-        place,
-        nearby,
-        short,
-        phone,
-        activity,
-        price,
-        mode,
-        images,
+        hours,
+        minutes,
+        seconds,
       }
     );
     res.json(true);

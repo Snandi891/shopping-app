@@ -22,7 +22,7 @@ export default function EditBanner2() {
       <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between py-3">
         <div>
           <p className="mt-1.5 text-md text-gray-500">
-            Editing {productInfo?.title}
+            Editing {productInfo?.hours}
           </p>
         </div>
       </div>

@@ -27,9 +27,7 @@ export default function bannerPage2() {
                 All Products
               </h1>
 
-              <p className="mt-1.5 text-md text-gray-500">
-                Let create a banner2
-              </p>
+              <p className="mt-1.5 text-md text-gray-500">Let Add Time</p>
             </div>
 
             <div className="flex items-center gap-4">
@@ -39,7 +37,7 @@ export default function bannerPage2() {
                    hover:text-green-700 focus:outline-none focus:ring"
                 href={"/bannerPage2/new"}
               >
-                <span className="text-md font-medium"> Create Products </span>
+                <span className="text-md font-medium"> Add Time </span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -76,16 +74,13 @@ export default function bannerPage2() {
                     class="px-6 py-4 font-medium text-gray-900"
                   ></th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    Name
+                    Hour
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    Description
+                    minite
                   </th>
                   <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    Price
-                  </th>
-                  <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                    image
+                    seconds
                   </th>
 
                   <th
@@ -107,20 +102,9 @@ export default function bannerPage2() {
                     <th class="px-6 py-4 font-medium text-gray-900">
                       {index + 1}
                     </th>
-                    <td class="px-6 py-4">{product.title}</td>
-                    <td class="px-6 py-4">{product.gender}</td>
-                    <td class="px-6 py-4 truncate max-w-xs ">
-                      {product.description}
-                    </td>
-
-                    <td class="px-6 py-4">{formatPrice(product.price)}</td>
-                    <td class="px-6 py-4 truncate max-w-xs ">
-                      <img
-                        class=" h-16 w-19 object-contain rounded-full"
-                        src={product.images[0]}
-                        alt=""
-                      />
-                    </td>
+                    <td class="px-6 py-4">{product.hours}</td>
+                    <td class="px-6 py-4">{product.minutes}</td>
+                    <td class="px-6 py-4">{product.seconds}</td>
 
                     <td class=" gap-4 px-2 py-2 font-medium">
                       <Link
