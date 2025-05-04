@@ -9,16 +9,30 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "POST") {
-    const { title, description, traveler, name, phone, ardhar, price, images } =
-      req.body;
+    const {
+      title,
+      description,
+      traveler,
+      name,
+      phone,
+      place,
+      email,
+      address,
+      ardhar,
+      price,
+      images,
+    } = req.body;
 
     const OrderDoc = await Order.create({
       title,
       description,
       traveler,
       name,
+      place,
+      address,
       phone,
       ardhar,
+      email,
       price,
       images,
     });
@@ -40,6 +54,9 @@ export default async function handle(req, res) {
       traveler,
       name,
       phone,
+      place,
+      email,
+      address,
       ardhar,
       price,
       images,
@@ -53,6 +70,9 @@ export default async function handle(req, res) {
         traveler,
         name,
         phone,
+        place,
+        email,
+        address,
         ardhar,
         price,
         images,

@@ -61,7 +61,7 @@ export default function EditProduct() {
               />
             </p>
             <p className="mt-1.5 text-md text-gray-500">
-              Travel {""}: {productInfo?.title}
+              Title {""}: {productInfo?.title}
             </p>
             <p className="mt-1.5 text-md text-gray-500">
               Price : {productInfo?.price}
@@ -72,6 +72,9 @@ export default function EditProduct() {
             <p className="mt-1.5 text-md text-gray-500">
               Traveler : {productInfo?.traveler}
             </p>
+            <p className="mt-1.5 text-md text-gray-500">
+              place : {productInfo?.place}
+            </p>
 
             <p className="mt-1.5 text-md text-gray-500">
               Customer Name : {productInfo?.name}
@@ -81,6 +84,12 @@ export default function EditProduct() {
             </p>
             <p className="mt-1.5 text-md text-gray-500">
               Customer Phone no : {productInfo?.phone}
+            </p>
+            <p className="mt-1.5 text-md text-gray-500">
+              Customer email : {productInfo?.email}
+            </p>
+            <p className="mt-1.5 text-md text-gray-500">
+              Customer address : {productInfo?.address}
             </p>
           </div>
         </div>

@@ -108,7 +108,7 @@ export default function bannerPage() {
                       {index + 1}
                     </th>
                     <td class="px-6 py-4">{product.title}</td>
-                    <td class="px-6 py-4">{product.gender}</td>
+
                     <td class="px-6 py-4 truncate max-w-xs ">
                       {product.description}
                     </td>
