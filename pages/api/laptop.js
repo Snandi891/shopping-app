@@ -54,6 +54,8 @@ export default async function handle(req, res) {
   if (method === "GET") {
     if (req.query?.id) {
       res.json(await Laptop.findById(req.query.id));
+    } else if (req.query?.traveler) {
+      res.json(await Laptop.find({ traveler: req.query.traveler }));
     } else {
       res.json(await Laptop.find());
     }

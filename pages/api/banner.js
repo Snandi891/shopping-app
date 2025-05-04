@@ -1,8 +1,6 @@
 import { mongooseConnect } from "@/lib/mongoose";
 import { Banner } from "@/models/Banner";
 
-// ram ,processor
-
 export default async function handle(req, res) {
   const { method } = req;
 
@@ -54,6 +52,11 @@ export default async function handle(req, res) {
   if (method === "GET") {
     if (req.query?.id) {
       res.json(await Banner.findById(req.query.id));
+    } else if (req.query?.traveler) {
+      const traveler = req.query.traveler.trim();
+      res.json(
+        await Banner.find({ traveler: { $regex: new RegExp(traveler, "i") } })
+      );
     } else {
       res.json(await Banner.find());
     }
