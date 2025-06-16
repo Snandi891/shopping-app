@@ -88,13 +88,13 @@ export default function Header() {
                   >
                     <Link href="/shoesProducts"> Premium </Link>
                   </li>
-                  <li
+                  {/* <li
                     className={
                       "text-gray-500 transition hover:text-gray-500/75 p-3"
                     }
                   >
                     <Link href="/sunglassProducts"> magic </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>
